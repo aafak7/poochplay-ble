@@ -1,0 +1,3 @@
+include ':PoochPlayBle'
+include ':app'
+rootProject.name = "BluetoothSample"

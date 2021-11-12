@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BarCodeActivity">
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/btnPick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/image"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:text="Pick Image from Gallery"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/btnOpenCamera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnPick"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:text="Open Camera"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/btnPickContact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnOpenCamera"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:text="Pick Contact"
+        android:textAllCaps="false" />
+
+</RelativeLayout>

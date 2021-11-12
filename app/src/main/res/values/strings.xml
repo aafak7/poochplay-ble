@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">BluetoothSample</string>
+    <string name="STEPS_SERVICE">0000fc00-0000-1000-8000-00805f9b34fb</string>
+    <string name="STEPS_CHARACTERISTICS">0000fc22-0000-1000-8000-00805f9b34fb</string>
+</resources>
