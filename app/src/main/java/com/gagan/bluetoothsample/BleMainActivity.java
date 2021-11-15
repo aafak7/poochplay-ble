@@ -6,7 +6,9 @@ import android.bluetooth.BluetoothDevice;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -14,17 +16,17 @@ import com.amit.poochplayble.BleCallBacks;
 import com.amit.poochplayble.DataManager;
 import com.clj.fastble.data.BleDevice;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import static android.content.ContentValues.TAG;
 
 public class BleMainActivity extends AppCompatActivity implements BleCallBacks {
-
-
-    private ListView listView;
-    private String deviseList = "";
+    private List<BluetoothDevice> lstDevices = new ArrayList<>();
+    private List<String> lstDevicesName = new ArrayList<>();
     private TextView tvScanning, tvBatteryPercentage, tvSteps;
     private Button btnScan;
+    private ListView listView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,11 +41,20 @@ public class BleMainActivity extends AppCompatActivity implements BleCallBacks {
                 DataManager.getInstance().scan();
             }
         });
+        listView = findViewById(R.id.listView);
+
+        listView.setOnItemClickListener((parent, view, position, id) -> {
+
+            DataManager.getInstance().deviceConnect(lstDevices.get(position));
+        });
     }
 
 
     @Override
     public void scanStart() {
+        lstDevicesName = new ArrayList<>();
+        ListAdapter adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, lstDevicesName);
+        listView.setAdapter(adapter);
         Log.e(TAG, "scanStart: " );
     }
 
@@ -57,6 +68,13 @@ public class BleMainActivity extends AppCompatActivity implements BleCallBacks {
         if(bluetoothDeviceList!=null && bluetoothDeviceList.size()>0) {
 //            DataManager.getInstance().deviceConnect(bluetoothDeviceList.get(0));
             Log.e(TAG, "getDeviceList: "+ bluetoothDeviceList.size());
+            lstDevices = new ArrayList<>(bluetoothDeviceList);
+            lstDevicesName = new ArrayList<>();
+            for (BluetoothDevice device: lstDevices){
+                lstDevicesName.add(device.getName()+"\n"+device.getAddress());
+            }
+            ListAdapter adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, lstDevicesName);
+            listView.setAdapter(adapter);
         }
 
     }

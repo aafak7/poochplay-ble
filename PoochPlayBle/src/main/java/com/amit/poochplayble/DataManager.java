@@ -4,7 +4,6 @@ import android.app.Application;
 import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothGatt;
 import android.os.Message;
-import android.view.View;
 
 import com.clj.fastble.BleManager;
 import com.clj.fastble.callback.BleGattCallback;
@@ -39,7 +38,7 @@ public class DataManager {
     }
 
 
-    public void setdata(String value) {
+    void setData(String value) {
         String tt = value.replace(" ", "").toUpperCase();
         byte[] data = hexStringToByte(tt);
         int one = getLowBit4(data[0]);
@@ -287,7 +286,7 @@ public class DataManager {
 
     }
 
-    public static byte[] hexStringToByte(String hex) {
+    private static byte[] hexStringToByte(String hex) {
         int len = hex.length() / 2;
         byte[] result = new byte[len];
         char[] achar = hex.toCharArray();
@@ -300,7 +299,7 @@ public class DataManager {
         return result;
     }
 
-    public static byte toByte(char c) {
+    private static byte toByte(char c) {
         byte b = (byte) "0123456789ABCDEF".indexOf(c);
         return b;
     }
@@ -317,19 +316,7 @@ public class DataManager {
     public void setBleCallBacks(BleCallBacks bleCallBacks) {
         this.bleCallBacks = bleCallBacks;
     }
-
-    public static class UserBodyInfo {
-        public static int weight = 600;
-        public static int age = 20;
-        public static int height = 170;
-        public static int sex = 1;
-        public static int target = 10000;
-
-        public UserBodyInfo() {
-        }
-    }
-
-    public static class UserSleepInfo {
+    private static class UserSleepInfo {
         public static int enableAutoSleepWakeup = 1;
         public static int startDetectSleepHH = 21;
         public static int startDetectSleepMM = 30;
@@ -393,7 +380,7 @@ public class DataManager {
                                                         stringBuilder.append(String.format("%02x ", byteChar));
                                                     }
 
-                                                    setdata(stringBuilder.toString());
+                                                    setData(stringBuilder.toString());
                                                 }
 
                                             }
