@@ -14,7 +14,6 @@ import android.widget.TextView;
 
 import com.amit.poochplayble.BleCallBacks;
 import com.amit.poochplayble.DataManager;
-import com.clj.fastble.data.BleDevice;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -105,7 +104,7 @@ public class BleMainActivity extends AppCompatActivity implements BleCallBacks {
     }
 
     @Override
-    public void connectSuccess(BleDevice bleDevice) {
-        Log.e(TAG, "connectSuccess: "+bleDevice.getMac() );
+    public void connectSuccess(String macAddress) {
+        Log.e(TAG, "connect Success:"+macAddress );
     }
 }

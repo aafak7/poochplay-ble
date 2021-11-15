@@ -346,7 +346,7 @@ public class DataManager {
             @Override
             public void onConnectSuccess(BleDevice bleDevice, BluetoothGatt gatt, int status) {
                 bluetoothGatt = gatt;
-                bleCallBacks.connectSuccess(bleDevice);
+                bleCallBacks.connectSuccess(bleDevice.getMac());
 //                tvScanning.setText(device.getAddress());
                 BleManager.getInstance().read(
                         bleDevice,

@@ -2,8 +2,6 @@ package com.amit.poochplayble;
 
 import android.bluetooth.BluetoothDevice;
 
-import com.clj.fastble.data.BleDevice;
-
 import java.util.List;
 
 public interface BleCallBacks {
@@ -17,5 +15,5 @@ public interface BleCallBacks {
 
     void startConnect();
     void connectFailed(BluetoothDevice device);
-    void connectSuccess(BleDevice bleDevice);
+    void connectSuccess(String bleDevice);
 }
