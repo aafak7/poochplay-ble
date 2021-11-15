@@ -32,8 +32,7 @@ public class BleMainActivity extends AppCompatActivity implements BleCallBacks {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         btnScan = findViewById(R.id.btnScan);
-        DataManager.getInstance().setApplication(getApplication());
-        DataManager.getInstance().setBleCallBacks(this);
+        DataManager.getInstance().setApplication(getApplication(),this);
         btnScan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

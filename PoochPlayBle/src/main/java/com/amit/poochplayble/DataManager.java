@@ -38,13 +38,11 @@ public class DataManager {
 
 
 
-    public void setApplication(Application application) {
+    public void setApplication(Application application,BleCallBacks bleCallBacks) {
         this.application = application;
-    }
-
-    public void setBleCallBacks(BleCallBacks bleCallBacks) {
         this.bleCallBacks = bleCallBacks;
     }
+
 
 
     public void deviceConnect(BluetoothDevice device) {
