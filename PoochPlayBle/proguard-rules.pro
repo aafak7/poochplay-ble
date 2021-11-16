@@ -20,3 +20,4 @@
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
 -keep class com.amit.poochplayble.DataManager{*;}
+-keep interface com.amit.poochplayble.BleCallBacks{*;}
