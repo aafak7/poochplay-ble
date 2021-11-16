@@ -14,7 +14,7 @@ public class BlueToothActivity {
         this.bleCallBacks = bleCallBacks;
     }
 
-    void setData(String value) {
+    protected void setData(String value) {
         String tt = value.replace(" ", "").toUpperCase();
         byte[] data = hexStringToByte(tt);
         int one = getLowBit4(data[0]);
