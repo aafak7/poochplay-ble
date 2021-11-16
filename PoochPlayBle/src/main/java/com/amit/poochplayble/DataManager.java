@@ -3,7 +3,6 @@ package com.amit.poochplayble;
 import android.app.Application;
 import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothGatt;
-import android.os.Message;
 
 import com.clj.fastble.BleManager;
 import com.clj.fastble.callback.BleGattCallback;
@@ -15,9 +14,7 @@ import com.clj.fastble.exception.BleException;
 import com.clj.fastble.scan.BleScanRuleConfig;
 
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.List;
-import java.util.Locale;
 
 import static com.amit.poochplayble.Constant.STEPS_CHARACTERISTICS;
 import static com.amit.poochplayble.Constant.STEPS_SERVICE;
@@ -93,8 +90,7 @@ public class DataManager {
                                                     for (byte byteChar : data) {
                                                         stringBuilder.append(String.format("%02x ", byteChar));
                                                     }
-                                                    BlueToothActivity blueToothActivity = new BlueToothActivity(bleCallBacks);
-                                                    blueToothActivity.setData(stringBuilder.toString());
+                                                    poochPlayData(stringBuilder);
                                                 }
 
                                             }
@@ -113,6 +109,11 @@ public class DataManager {
 
             }
         });
+    }
+
+    protected void poochPlayData(StringBuilder stringBuilder) {
+        BlueToothActivity blueToothActivity = new BlueToothActivity(bleCallBacks);
+        blueToothActivity.setData(stringBuilder.toString());
     }
 
     public void scan() {
