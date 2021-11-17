@@ -19,6 +19,7 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
--keep class com.amit.poochplayble.DataManager{*;}
+-keep class com.amit.poochplayble.DataManager{public <methods>;}
 -keep class com.amit.poochplayble.BlueToothActivity{public <methods>;}
 -keep interface com.amit.poochplayble.BleCallBacks{*;}
+-repackageclasses ''
