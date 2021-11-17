@@ -23,3 +23,4 @@
 -keep class com.amit.poochplayble.BlueToothActivity{public <methods>;}
 -keep interface com.amit.poochplayble.BleCallBacks{*;}
 -repackageclasses ''
+-overloadaggressively
