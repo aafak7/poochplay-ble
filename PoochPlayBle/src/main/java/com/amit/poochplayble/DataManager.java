@@ -92,7 +92,7 @@ public class DataManager {
                                                     for (byte byteChar : data) {
                                                         stringBuilder.append(String.format("%02x ", byteChar));
                                                     }
-                                                    bleCallBacks.getDeviceData(stringBuilder.toString());
+                                                    bleCallBacks.getDeviceData(data);
                                                     poochPlayData(stringBuilder);
 
                                                 }
