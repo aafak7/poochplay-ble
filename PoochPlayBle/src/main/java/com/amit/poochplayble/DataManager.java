@@ -39,7 +39,9 @@ public class DataManager {
         this.application = application;
         this.bleCallBacks = bleCallBacks;
     }
-
+    public void deviceDisConnect() {
+        BleManager.getInstance().disconnectAllDevice();
+    }
 
 
     public void deviceConnect(BluetoothDevice device) {
