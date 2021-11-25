@@ -10,6 +10,7 @@ public interface BleCallBacks {
     void getDeviceList(List<BluetoothDevice> bluetoothDeviceList);
     void getDevicePercentage(String batteryPercentage);
 
+    void getDeviceData(String totalData);
     void getTotalCalories(String totalCalories);
     void getTotalSteps(String totalSteps);
 

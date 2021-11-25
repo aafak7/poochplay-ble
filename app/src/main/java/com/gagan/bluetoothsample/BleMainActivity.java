@@ -83,6 +83,11 @@ public class BleMainActivity extends AppCompatActivity implements BleCallBacks {
     }
 
     @Override
+    public void getDeviceData(String totalData) {
+        Log.e(TAG, "getDeviceData: "+ totalData);
+    }
+
+    @Override
     public void getTotalCalories(String totalCalories) {
         Log.e(TAG, "getTotalCalories: "+totalCalories );
     }

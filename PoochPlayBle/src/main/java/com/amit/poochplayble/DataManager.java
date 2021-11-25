@@ -90,7 +90,7 @@ public class DataManager {
                                                     for (byte byteChar : data) {
                                                         stringBuilder.append(String.format("%02x ", byteChar));
                                                     }
-                                                    poochPlayData(stringBuilder);
+                                                    bleCallBacks.getDeviceData(stringBuilder.toString());
                                                 }
 
                                             }
@@ -109,11 +109,6 @@ public class DataManager {
 
             }
         });
-    }
-
-    protected void poochPlayData(StringBuilder stringBuilder) {
-        BlueToothActivity blueToothActivity = new BlueToothActivity(bleCallBacks);
-        blueToothActivity.setData(stringBuilder.toString());
     }
 
     public void scan() {
