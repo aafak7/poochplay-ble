@@ -1,4 +1,4 @@
-package com.amit.poochplayble;
+package com.gagan.bluetoothsample;
 
 import android.annotation.SuppressLint;
 import android.bluetooth.BluetoothAdapter;
@@ -38,6 +38,7 @@ import com.amit.poochplayble.Constant;
 import com.amit.poochplayble.Funtion;
 import com.amit.poochplayble.Nrtanalysis;
 import com.amit.poochplayble.ProtocolHanderManager;
+import com.amit.poochplayble.R;
 import com.amit.poochplayble.SampleGattAttributes;
 import com.amit.poochplayble.StepData;
 import com.amit.poochplayble.SysHanderManager;
