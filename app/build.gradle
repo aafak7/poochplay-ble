@@ -7,7 +7,7 @@ android {
     buildToolsVersion "30.0.3"
 
     defaultConfig {
-        applicationId "com.gagan.bluetoothsample"
+        applicationId "com.amit.poochplayble"
         minSdkVersion 21
         targetSdkVersion 30
         versionCode 1

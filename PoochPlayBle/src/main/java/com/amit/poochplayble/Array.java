@@ -83,11 +83,11 @@ public class Array {
     public static final int DEVICE_SURPORT_HEART_PARA_SET_POS = 1;
     public static final int DEVICE_SURPORT_ANT_PARA_SET_POS = 2;
     public static int transLayerVersion = 0;
-    public static Array.DeviceSurport deviceSurport = new Array.DeviceSurport();
-    public static Array.UploadCtrlSwitch swtihInfo = new Array.UploadCtrlSwitch();
-    public static Array.UploadSettingTime settingTimeInfo = new Array.UploadSettingTime();
-    public static Array.AndroidCallInfo androidCallInfo = new Array.AndroidCallInfo();
-    public static Array.AndroidMsgInfo androidMsgInfo = new Array.AndroidMsgInfo();
+    public static DeviceSurport deviceSurport = new DeviceSurport();
+    public static UploadCtrlSwitch swtihInfo = new UploadCtrlSwitch();
+    public static UploadSettingTime settingTimeInfo = new UploadSettingTime();
+    public static AndroidCallInfo androidCallInfo = new AndroidCallInfo();
+    public static AndroidMsgInfo androidMsgInfo = new AndroidMsgInfo();
 
     public Array() {
     }
@@ -137,7 +137,7 @@ public class Array {
     public static class SettingAlarmTime {
         public static boolean isUploadAllAlarm;
         public static int needUploadAlarmSeq;
-        public static Array.UploadSettingAlarmTime[] alarmInfo = new Array.UploadSettingAlarmTime[8];
+        public static UploadSettingAlarmTime[] alarmInfo = new UploadSettingAlarmTime[8];
 
         public SettingAlarmTime() {
         }
@@ -184,9 +184,9 @@ public class Array {
     }
 
     public static class UploadSettingTime {
-        public Array.SettingAlarmTime settingAlarmTime = new Array.SettingAlarmTime();
-        public Array.UploadSettingHealthTime moveInfo = new Array.UploadSettingHealthTime();
-        public Array.UploadSettingHealthTime waterInfo = new Array.UploadSettingHealthTime();
+        public SettingAlarmTime settingAlarmTime = new SettingAlarmTime();
+        public UploadSettingHealthTime moveInfo = new UploadSettingHealthTime();
+        public UploadSettingHealthTime waterInfo = new UploadSettingHealthTime();
 
         public UploadSettingTime() {
         }

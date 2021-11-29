@@ -1,4 +1,4 @@
-package com.gagan.bluetoothsample;
+package com.amit.poochplayble;
 
 import android.content.Context;
 
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
     public void useAppContext() {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
-        assertEquals("com.gagan.bluetoothsample", appContext.getPackageName());
+        assertEquals("com.amit.poochplayble", appContext.getPackageName());
     }
 }

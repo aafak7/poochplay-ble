@@ -1,4 +1,4 @@
-package com.gagan.bluetoothsample;
+package com.amit.poochplayble;
 
 import org.junit.Test;
 
