@@ -24,6 +24,8 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.location.LocationManagerCompat;
 
+import com.gagan.bluetoothsample.TrackerActivity;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -99,7 +101,7 @@ public class BleMainActivity extends AppCompatActivity implements BleCallBacks {
             BluetoothDevice device = lstDevices.get(position);
             mDeviceAddress=device.getAddress();
 
-            Intent intent= new Intent(this, com.amit.poochplayble.TrackerActivity.class);
+            Intent intent= new Intent(this, TrackerActivity.class);
             intent.putExtra("device",mDeviceAddress);
             startActivity(intent);
         });
