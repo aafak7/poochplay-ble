@@ -67,9 +67,14 @@
 -keep class com.amit.poochplayble.BleDecodeRtData{*;}
 -keep class com.amit.poochplayble.BleDecodeNrtData{*;}
 -keep class com.amit.poochplayble.BleDecodeData{*;}
+-keep class com.amit.poochplayble.Utils{*;}
+-keep class com.amit.poochplayble.Util{*;}
 -keepattributes Exceptions, InnerClasses
 -keep class com.amit.poochplayble.BleService$*
+-keep class com.amit.poochplayble.Utils
+-keep class com.amit.poochplayble.Array$*
 -keep class com.amit.poochplayble.BleService$*{public <methods>;}
+-keep class com.amit.poochplayble.Array$*{public <methods>;}
 #-keepclassmembers class com.amit.poochplayble.BleService** {
 #    *;}
 #-keep public class com.amit.poochplayble.*
