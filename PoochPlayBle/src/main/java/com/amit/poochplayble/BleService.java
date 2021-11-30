@@ -440,6 +440,7 @@ public class BleService extends Service {
     }
 
     public class LocalBinder extends Binder {
+
         public LocalBinder() {
         }
 

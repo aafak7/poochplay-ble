@@ -69,6 +69,7 @@
 -keep class com.amit.poochplayble.BleDecodeData{*;}
 -keepattributes Exceptions, InnerClasses
 -keep class com.amit.poochplayble.BleService$*
+-keep class com.amit.poochplayble.BleService$*{public <methods>;}
 #-keepclassmembers class com.amit.poochplayble.BleService** {
 #    *;}
 #-keep public class com.amit.poochplayble.*
