@@ -75,6 +75,7 @@
 -keep class com.amit.poochplayble.Array$*
 -keep class com.amit.poochplayble.BleService$*{public <methods>;}
 -keep class com.amit.poochplayble.Array$*{public <methods>;}
+-keep class com.amit.poochplayble.Array$*{public <fields>;}
 #-keepclassmembers class com.amit.poochplayble.BleService** {
 #    *;}
 #-keep public class com.amit.poochplayble.*
