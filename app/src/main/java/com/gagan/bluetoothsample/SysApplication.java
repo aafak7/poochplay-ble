@@ -1,12 +1,5 @@
 package com.amit.poochplayble;
-/*
- *
- *  * 12/2/2021
- *  * Poochplay
- *  * Created by Isha Nagar on 12/2/21 11:47 AM
- *  * Copyright (c) POOCHPLAY Limited. All rights reserved
- *
- */
+
 import android.app.Application;
 import android.content.ComponentName;
 import android.content.Context;
