@@ -53,6 +53,21 @@
 -keep class com.amit.poochplayble.HeartBleService{*;}
 -keep class com.amit.poochplayble.GattServices{*;}
 -keep class com.amit.poochplayble.Funtion{*;}
+-keep class com.amit.poochplayble.DaysTotal{*;}
+-keep class com.amit.poochplayble.Constant{*;}
+-keep class com.amit.poochplayble.BuildConfig{*;}
+-keep class com.amit.poochplayble.BleTransLayer{*;}
+-keep class com.amit.poochplayble.BleState{*;}
+-keep class com.amit.poochplayble.BleReceiver{*;}
+-keep class com.amit.poochplayble.BleMarco{*;}
+-keep class com.amit.poochplayble.BleHelper{*;}
+-keep class com.amit.poochplayble.BleEncodeRtData{*;}
+-keep class com.amit.poochplayble.BleEncodeNrtData{*;}
+-keep class com.amit.poochplayble.BleDecodeRtData{*;}
+-keep class com.amit.poochplayble.BleDecodeNrtData{*;}
+-keep class com.amit.poochplayble.BleDecodeData{*;}
+-keep class com.amit.poochplayble.BleService{*;}
+
 -keep public class com.amit.poochplayble.*
 
 -repackageclasses ''
