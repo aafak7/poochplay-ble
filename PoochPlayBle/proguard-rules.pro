@@ -67,8 +67,7 @@
 -keep class com.amit.poochplayble.BleDecodeRtData{*;}
 -keep class com.amit.poochplayble.BleDecodeNrtData{*;}
 -keep class com.amit.poochplayble.BleDecodeData{*;}
+#-keep public class com.amit.poochplayble.*
 
--keep public class com.amit.poochplayble.*
-
--repackageclasses ''
--overloadaggressively
+#-repackageclasses ''
+#-overloadaggressively
